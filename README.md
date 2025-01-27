@@ -1,3 +1,3 @@
 # LoFabio :]
-<img align="left" height="137px" src="https://github-readme-stats-one-rosy.vercel.app/api?username=LoFabio&hide_title=true&hide_border=false&show_icons=false&count_private=true&line_height=21&theme=dracula" />
-<img align="left" height="137px" src="https://github-readme-stats-one-rosy.vercel.app/api/top-langs/?username=LoFabio&hide_title=true&hide_border=true&layout=compact&hide=html&theme=dracula" />
+![LoFabio's Github Stats Donut](https://github-readme-stats.vercel.app/api/top-langs/?username=devzeld&layout=donut&hide_border=true&theme=transparent)
+![LoFabio's Github Stats](https://github-readme-stats.vercel.app/api?username=devzeld&show_icons=true&layout=compact&hide_border=true&theme=transparent)
