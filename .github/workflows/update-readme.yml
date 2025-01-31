@@ -1,0 +1,35 @@
+name: Update GitHub Stats in README
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs daily at midnight
+  workflow_dispatch:  # Allows manual updates
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Fetch GitHub Stats and Languages
+        env:
+          TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        run: |
+          curl -o stats.svg "https://github-readme-stats.vercel.app/api?username=LoFabio&show_icons=true&hide_border=true&theme=transparent&token=$TOKEN"
+          curl -o langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=LoFabio&layout=donut&hide_border=true&theme=transparent&token=$TOKEN"
+
+      - name: Update README
+        run: |
+          echo '# LoFabio's GitHub Stats :)' > README.md
+          echo '' >> README.md
+          echo '![LoFabio's GitHub Stats](./stats.svg)' >> README.md
+          echo '![LoFabio's Most Used Languages](./langs.svg)' >> README.md
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md stats.svg langs.svg
+          git commit -m "Update GitHub Stats in README" || echo "No changes to commit"
+          git push
