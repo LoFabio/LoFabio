@@ -21,7 +21,7 @@ jobs:
 
       - name: Update README
         run: |
-          echo '# LoFabio's GitHub Stats :)' > README.md
+          echo '# LoFabio's GitHub Stats' > README.md
           echo '' >> README.md
           echo '![LoFabio's GitHub Stats](./stats.svg)' >> README.md
           echo '![LoFabio's Most Used Languages](./langs.svg)' >> README.md
