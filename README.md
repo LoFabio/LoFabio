@@ -1,4 +1,4 @@
-## LoFabio :]
+### LoFabio :]
 
 <div align="center">
   <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api?username=LoFabio&show_icons=true&layout=compact&hide_border=true&theme=transparent"/>
